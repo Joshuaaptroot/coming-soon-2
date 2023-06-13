@@ -1,0 +1,486 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  cursor: url("lightmouse.png"), auto;
+}
+
+body {
+    background-color: bisque;
+}
+
+.title {
+    font-family: 'montserrat', sans-serif;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    text-align: center;
+    color: rgb(123, 94, 57);
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+p {
+    font-family: 'montserrat', sans-serif;
+    position: fixed;
+    top: 60%; /* Adjust this value to create space between the .title and <p> elements */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    text-align: center;
+    color: rgb(123, 94, 57);
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+/* images - pipes*/
+
+.pipes {
+    height: auto;
+    max-width: 100%;
+    z-index: -1;
+    transform: translatez(50%);
+    left: 0%;
+    top: 0%;
+}
+
+.button a{
+    font-family: 'montserrat', sans-serif;
+    text-decoration: none;
+    color: rgb(123, 94, 57);
+    position: fixed;
+    top: 2rem;
+    right: 4rem;
+    display: inline-block;
+    background: #fff;
+    padding: 0.625rem 1.875rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid rgb(123, 94, 57);
+    border-radius: 3.125rem;
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.button a:hover {
+    border: 0.125rem solid #d2831a;
+    color: #d2831a;
+    cursor: pointer;
+}
+
+/*workers*/
+
+@keyframes armAnimation {
+    100%, 0% {
+      transform: rotate(50deg);
+    }
+    50% {
+      transform: rotate(90deg);
+      
+     }
+  }
+  @keyframes b-armAnimation {
+    100%, 0% {
+      transform: rotate(70deg);
+    }
+    50% {
+      transform: rotate(10deg);
+      
+     }
+  }
+
+  @keyframes rotater {
+    from {
+      transform: rotate(0deg);
+      animation-timing-function: linear;
+    }
+  
+    to {
+      transform: rotate(360deg);
+      animation-timing-function: linear;
+    }
+  }  
+
+  @keyframes b-rotater {
+    from {
+      transform: rotate(360deg);
+      animation-timing-function: linear;
+    }
+  
+    to {
+      transform: rotate(0deg);
+      animation-timing-function: linear;
+    }
+  }
+
+  @keyframes moveAcross {
+    0% {
+      transform: translateX(50%);
+      animation-timing-function: linear;
+    }
+    100% {
+      transform: translateX(-100%);
+      animation-timing-function: linear;
+    }  
+  }
+
+  @keyframes b-moveAcross {
+    0% {
+      transform: translateX(-100%);
+      animation-timing-function: linear;
+    }
+    100% {
+      transform: translateX(50%);
+      animation-timing-function: linear;
+    }  
+    
+  }
+  
+  
+
+.worker1.image-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: fixed;
+    bottom: -7%;
+    right: -7%;
+    width: 25%;
+    height: auto;
+    transform: scaleX(-1);
+  }
+  
+  .worker1.image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .hand {
+    position: absolute;
+    bottom: 44%;
+    right: 48%;
+    width: 20%;
+    height: auto;
+    animation: b-armAnimation 7s infinite;
+  }
+
+  .worker2.image-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 30%;
+    left: -7%;
+    width: 25%;
+    height: auto;
+  }
+  
+  .worker2.image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .hand2 {
+    position: absolute;
+    bottom: 55%;
+    right: 48%;
+    width: 20%;
+    height: auto;
+    animation: b-armAnimation 10s infinite;
+  }
+
+  .worker3.image-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 40%;
+    right: -7%;
+    width: 25%;
+    height: auto;
+    transform: scaleX(-1);
+  }
+  
+  .worker3.image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .hand3 {
+    position: absolute;
+    bottom: 70%;
+    right: 48%;
+    width: 20%;
+    height: auto;
+    animation: b-armAnimation 7s infinite;
+  }
+
+
+  .worker4.image-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 34%;
+    right: 20%;
+    width: 25%;
+    height: auto;
+    transform: scaleX();
+  }
+  
+  .worker4.image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .hand4 {
+    position: absolute;
+    bottom: 44%;
+    right: 48%;
+    width: 20%;
+    height: auto;
+    animation: b-armAnimation 8s infinite;
+  }
+
+  .worker5.image-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 34%;
+    left: 22%;
+    width: 25%;
+    height: auto;
+    transform: scaleX(-1);
+  }
+  
+  .worker5.image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .hand5 {
+    position: absolute;
+    bottom: 45%;
+    right: 47.5%;
+    width: 20%;
+    height: auto;
+    animation: b-armAnimation 18s infinite;
+  }
+
+  .worker6.image-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 77%;
+    right: 10%;
+    width: 25%;
+    height: auto;
+    transform: scaleX(-1);
+  }
+  
+  .worker6.image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .hand6 {
+    position: absolute;
+    bottom: 45%;
+    right: 47.5%;
+    width: 20%;
+    height: auto;
+    animation: b-armAnimation 11s infinite;
+  }
+
+  .worker7.image-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 58%;
+    right: -10%;
+    width: 40%;
+    height: auto;
+    transform: scaleX(-1);
+  }
+  
+  .worker7.image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .hand7 {
+    position: absolute;
+    bottom: 52.1%;
+    right: 48.5%;
+    width: 16%;
+    height: auto;
+    animation: armAnimation 20s infinite;
+  }
+  .hand8 {
+    position: absolute;
+    bottom: 52.5%;
+    right: 39.5%;
+    width: 16%;
+    height: auto;
+    animation: b-armAnimation 12s infinite;
+  }
+
+
+  
+  .runners.image-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 60%;
+    right: 0%;
+    width: 100%;
+    height: auto;
+  }
+  
+  .movers.image-container {
+    position: absolute;
+    bottom: 7%;
+    right: 0%;
+    width: 100%;
+    height: 60%;
+    animation: moveAcross 20s infinite
+  }
+  
+  .movers-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: 50%;
+    ;
+  }
+  
+  .wheelies {
+    position: absolute;
+    width: 100%;
+    bottom: 17%;
+  }
+  
+  .runners.image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .bridge {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    transform: translateY(40%);
+  }
+  
+  .runner-couple {
+    position: absolute;
+    width: 30%;
+    bottom: -10%;
+    right: 20%;
+    height: auto;
+  }
+  
+  .wheel {
+    position: absolute;
+    bottom: 17%;
+    right: 30.54%;
+    width: 8%;
+    height: auto;
+    animation: b-rotater 7s infinite;
+  }
+  
+  .wheel2 {
+    position: absolute;
+    bottom: 17%;
+    right: 24.1%;
+    width: 8%;
+    height: auto;
+    animation: b-rotater 7s infinite;
+  }
+  
+  
+  .runners.image-container2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 10%;
+    right: 0%;
+    width: 100%;
+    height: auto;
+    transform: scaleX(-1);
+    z-index: 2;
+  }
+  
+  .movers.image-container2 {
+    position: absolute;
+    bottom: 7%;
+    right: 0%;
+    width: 100%;
+    height: 60%;
+    animation: moveAcross 20s infinite
+  }
+  
+  .movers-wrapper2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: 50%;
+    ;
+  }
+  
+  .wheelies2 {
+    position: absolute;
+    width: 100%;
+    bottom: 17%;
+  }
+  
+  .runners.image-container2 img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .bridge2 {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    transform: translateY(40%);
+  }
+  
+  .runner-couple2 {
+    position: absolute;
+    width: 30%;
+    bottom: -10%;
+    right: 20%;
+    height: auto;
+  }
+  
+  .wheel3 {
+    position: absolute;
+    bottom: 17%;
+    right: 30.54%;
+    width: 8%;
+    height: auto;
+    animation: b-rotater 7s infinite;
+  }
+  
+  .wheel4 {
+    position: absolute;
+    bottom: 17%;
+    right: 24.1%;
+    width: 8%;
+    height: auto;
+    animation: b-rotater 7s infinite;
+  }
+  
